@@ -4,4 +4,5 @@
 <a href="https://codeclimate.com/github/MenzurenkoKirill/java-project-61/test_coverage"><img src="https://api.codeclimate.com/v1/badges/7876693f13ca93a28018/test_coverage" /></a>
 https://asciinema.org/a/mlzDAqMwec6KdA2JHDpd8aNnW
 https://asciinema.org/a/A9Xf19isxi3l0n8kEHx5FUJA3
+https://asciinema.org/a/rDHOpG5EnB9ChxSkXu7lnbYmp
 
