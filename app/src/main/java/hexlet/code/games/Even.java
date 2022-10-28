@@ -31,11 +31,11 @@ public class Even {
             } else {
                 if (x % 2 != 0) {
                     System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'\n"
-                            + " Let's try again, " + Engine.userName);
+                            + " Let's try again, " + Engine.userName + "!");
                     return;
                 } else {
                     System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'\n"
-                            + " Let's try again, " + Engine.userName);
+                            + " Let's try again, " + Engine.userName + "!");
                     return;
                 }
             }
