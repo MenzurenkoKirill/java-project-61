@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Progression {
@@ -27,7 +26,8 @@ public class Progression {
                 arrayWithSpace[c] = Integer.toString(arrayProgression[c]);
             }
             arrayWithSpace[randomIndex] = "..";
-            System.out.println("Question: " + Arrays.toString(arrayWithSpace));
+            String array = String.join(" ", arrayWithSpace);
+            System.out.println("Question: " + array);
             String userAnswer = scanner.next();
             System.out.println("Your answer: " + userAnswer);
             if (Integer.parseInt(userAnswer) == correctAnswer) {
