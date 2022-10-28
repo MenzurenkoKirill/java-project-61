@@ -7,6 +7,7 @@ public class Calc {
     public static void numeracy() {
         Engine.greetings();
         Scanner scannerNumeracy = new Scanner(System.in);
+        System.out.println("What is the result of the expression?");
         for (int i = 1; i <= 3; i++) {
             int operand1 = (int) (Math.random() * 101);
             int operand2 = (int) (Math.random() * 101);
