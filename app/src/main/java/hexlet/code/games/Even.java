@@ -20,11 +20,11 @@ public class Even {
                 System.out.println("Correct!");
             } else if (x % 2 != 0 & answer.equals(yesAnswer)) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'\n"
-                        + " Let's try again, " + Engine.userName);
+                        + " Let's try again, " + Engine.userName + "!");
                 return;
             } else if (x % 2 == 0 & answer.equals(noAnswer)) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'\n"
-                        + " Let's try again, " + Engine.userName);
+                        + " Let's try again, " + Engine.userName + "!");
                 return;
             } else if (x % 2 != 0 & answer.equals(noAnswer)) {
                 System.out.println("Correct!");

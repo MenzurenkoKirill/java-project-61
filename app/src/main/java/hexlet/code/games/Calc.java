@@ -21,7 +21,7 @@ public class Calc {
                         System.out.println("Correct!");
                     } else {
                         System.out.println("'" + userAnswer1 + "' is wrong answer ;(. Correct answer was '" + +
-                                +(operand1 + operand2) + "'.");
+                                +(operand1 + operand2) + "'.\nLet's try again, " + Engine.userName + "!");
                         return;
                     }
                     break;
@@ -34,7 +34,7 @@ public class Calc {
                         System.out.println("Correct!");
                     } else {
                         System.out.println("'" + userAnswer2 + "' is wrong answer ;(. Correct answer was '" + +
-                                +(operand1 - operand2) + "'.");
+                                +(operand1 - operand2) + "'.\nLet's try again, " + Engine.userName + "!");
                         return;
                     }
                     break;
