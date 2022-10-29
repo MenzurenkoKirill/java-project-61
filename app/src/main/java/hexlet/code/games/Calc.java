@@ -3,12 +3,12 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Calc {
-    private static int border1 = 0;
-    private static int border2 = 100;
-    private static int iteration = 3;
-    private static int inclusive = 1;
-    private static int borderOperation1 = 1;
-    private static int borderOperation2 = 3;
+    private final static int border1 = 0;
+    private final static int border2 = 100;
+    private final static int iteration = 3;
+    private final static int inclusive = 1;
+    private final static int borderOperation1 = 1;
+    private final static int borderOperation2 = 3;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;

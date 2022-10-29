@@ -3,10 +3,10 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Prime {
-    private static int border1 = 2;
-    private static int border2 = 1000;
-    private static int iteration = 3;
-    private static int inclusive = 1;
+    private final static int border1 = 2;
+    private final static int border2 = 1000;
+    private final static int iteration = 3;
+    private final static int inclusive = 1;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
