@@ -3,12 +3,12 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Progression {
-    private static int iteration = 3;
-    private static int border1 = 1;
-    private static int border2 = 100;
-    private static int inclusive = 1;
-    private static int borderArray1 = 5;
-    private static int borderArray2 = 10;
+    static int iteration = 3;
+    static int border1 = 1;
+    static int border2 = 100;
+    static int inclusive = 1;
+    static int borderArray1 = 5;
+    static int borderArray2 = 10;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
