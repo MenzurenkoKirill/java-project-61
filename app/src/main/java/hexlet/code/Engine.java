@@ -9,7 +9,7 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class Engine {
-    public static String userName;
+    private static String userName;
     public static void congratulation() {
         System.out.println("Congratulations, " + userName + "!");
     }

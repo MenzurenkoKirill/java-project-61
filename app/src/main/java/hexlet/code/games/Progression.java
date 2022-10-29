@@ -1,19 +1,32 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class Progression {
+    private static int iteration = 3;
+    private static int border1 = 1;
+    private static int border2 = 100;
+    private static int inclusive = 1;
+    private static int borderArray1 = 5;
+    private static int borderArray2 = 10;
+    private static String userName;
+    private static void setUserName(String name) {
+        userName = name;
+    }
+    private static void greetings() {
+        System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
+        Scanner scannerGreetings = new Scanner(System.in);
+        String name = scannerGreetings.next();
+        setUserName(name);
+        System.out.println("Hello, " + userName + "!");
+    }
+    private static void congratulation() {
+        System.out.println("Congratulations, " + userName + "!");
+    }
     public static void arithmeticProgression() {
-        Engine.greetings();
+        greetings();
         Scanner scanner = new Scanner(System.in);
         System.out.println("What number is missing in the progression?");
-        int iteration = 3;
-        int border1 = 1;
-        int border2 = 100;
-        int inclusive = 1;
-        int borderArray1 = 5;
-        int borderArray2 = 10;
         for (int i = 1; i <= iteration; i++) {
             int number1 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
             int number2 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
@@ -40,11 +53,11 @@ public class Progression {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was"
-                        + " '" + correctAnswer + "'.\nLet's try again, " + Engine.userName + "!");
+                        + " '" + correctAnswer + "'.\nLet's try again, " + userName + "!");
                 return;
             }
         }
-        Engine.congratulation();
+        congratulation();
     }
 }
 
