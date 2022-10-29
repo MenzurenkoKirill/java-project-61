@@ -21,9 +21,13 @@ public class GCD {
     public static void commonDivisor() {
         Engine.greetings();
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 1; i <= 3; i++) {
-            int number1 = (int) (Math.random() * 100) + 1;
-            int number2 = (int) (Math.random() * 100) + 1;
+        int border1 = 1;
+        int border2 = 100;
+        int iteration = 3;
+        int inclusive = 1;
+        for (int i = 1; i <= iteration; i++) {
+            int number1 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
+            int number2 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
             int generateGcd  = findGcd(number1, number2);
             System.out.println("Question: " + number1 + " " + number2);
             Scanner scannerGsd = new Scanner(System.in);

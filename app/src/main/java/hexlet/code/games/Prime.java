@@ -20,8 +20,12 @@ public class Prime {
         Engine.greetings();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
-        for (int i = 1; i <= 3; i++) {
-            int number = (int) (Math.random() * 999) + 2;
+        int border1 = 2;
+        int border2 = 1000;
+        int iteration = 3;
+        int inclusive = 1;
+        for (int i = 1; i <= iteration; i++) {
+            int number = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
             System.out.println("Question: " + number);
             String answer = scanner.next();
             System.out.println("Your answer: " + answer);

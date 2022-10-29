@@ -13,15 +13,15 @@ public class Engine {
     public static void congratulation() {
         System.out.println("Congratulations, " + userName + "!");
     }
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public static void setUserName(String name) {
+        userName = name;
     }
+
     public static void greetings() {
         System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         Scanner scannerGreetings = new Scanner(System.in);
         String userName1 = scannerGreetings.next();
-        Engine person = new Engine();
-        person.setUserName(userName1);
+        setUserName(userName1);
         System.out.println("Hello, " + userName + "!");
     }
     public static void startGame() {

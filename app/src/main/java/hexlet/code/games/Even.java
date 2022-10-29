@@ -11,8 +11,12 @@ public class Even {
         Scanner scannerNumberGame = new Scanner(System.in);
         Engine.greetings();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        for (int i = 1; i <= 3; i++) {
-            int x = (int) (Math.random() * 1001);
+        int border1 = 0;
+        int border2 = 100;
+        int iteration = 3;
+        int inclusive = 1;
+        for (int i = 1; i <= iteration; i++) {
+            int x = (int) (Math.random() * (border2 - border1 + iteration)) + border1;
             System.out.println("Question: " + x);
             String answer = scannerNumberGame.next();
             System.out.println("Your answer: " + answer);

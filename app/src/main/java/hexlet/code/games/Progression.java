@@ -8,10 +8,16 @@ public class Progression {
         Engine.greetings();
         Scanner scanner = new Scanner(System.in);
         System.out.println("What number is missing in the progression?");
-        for (int i = 1; i <= 3; i++) {
-            int number1 = (int) (Math.random() * 100) + 1;
-            int number2 = (int) (Math.random() * 100) + 1;
-            int progressionLength = (int) (Math.random() * 6) + 5;
+        int iteration = 3;
+        int border1 = 1;
+        int border2 = 100;
+        int inclusive = 1;
+        int borderArray1 = 5;
+        int borderArray2 = 10;
+        for (int i = 1; i <= iteration; i++) {
+            int number1 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
+            int number2 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
+            int progressionLength = (int) (Math.random() * (borderArray2 - borderArray1 + inclusive)) + borderArray1;
             int randomIndex = (int) (Math.random() * (progressionLength - 2)) + 2;
             int[] arrayProgression = new int[progressionLength];
             arrayProgression[0] = number1;
