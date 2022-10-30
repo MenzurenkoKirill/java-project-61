@@ -9,6 +9,7 @@ public class Calc {
     private static final int INCLUSIVE = 1;
     private static final int MIN_VALUE_OPERATION = 1;
     private static final int MAX_VALUE_OPERATION = 3;
+
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
@@ -59,7 +60,7 @@ public class Calc {
                         return;
                     }
                     break;
-                case(3):
+                case(MAX_VALUE_OPERATION):
                     System.out.println("Question: " + operand1 + " * " + operand2);
                     String userAnswer3 = scannerNumeracy.next();
                     System.out.println("Your answer: " + userAnswer3);
