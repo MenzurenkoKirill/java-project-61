@@ -3,10 +3,10 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Even {
-    private final static int border1 = 0;
-    private final static int border2 = 100;
-    private final static int iteration = 3;
-    private final static int inclusive = 1;
+    private static final int MIN_RANGE = 0;
+    private static final int MAX_RANGE = 100;
+    private static final int ITERATION = 3;
+    private static final int INCLUSIVE = 1;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
@@ -27,8 +27,8 @@ public class Even {
         Scanner scannerNumberGame = new Scanner(System.in);
         greetings();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        for (int i = 1; i <= iteration; i++) {
-            int x = (int) (Math.random() * (border2 - border1 + iteration)) + border1;
+        for (int i = 1; i <= ITERATION; i++) {
+            int x = (int) (Math.random() * (MAX_RANGE - MIN_RANGE + INCLUSIVE)) + MIN_RANGE;
             System.out.println("Question: " + x);
             String answer = scannerNumberGame.next();
             System.out.println("Your answer: " + answer);

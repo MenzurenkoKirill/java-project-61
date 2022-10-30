@@ -3,10 +3,10 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class GCD {
-    private final static int border1 = 1;
-    private final static int border2 = 100;
-    private final static int iteration = 3;
-    private final static int inclusive = 1;
+    private static final int MIN_RANGE = 1;
+    private static final int MAX_RANGE = 100;
+    private static final int ITERATION = 3;
+    private static final int INCLUSIVE = 1;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
@@ -38,9 +38,9 @@ public class GCD {
     public static void commonDivisor() {
         greetings();
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 1; i <= iteration; i++) {
-            int number1 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
-            int number2 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
+        for (int i = 1; i <= ITERATION; i++) {
+            int number1 = (int) (Math.random() * (MAX_RANGE - MIN_RANGE + INCLUSIVE)) + MIN_RANGE;
+            int number2 = (int) (Math.random() * (MAX_RANGE - MIN_RANGE + INCLUSIVE)) + MIN_RANGE;
             int generateGcd  = findGcd(number1, number2);
             System.out.println("Question: " + number1 + " " + number2);
             Scanner scannerGsd = new Scanner(System.in);

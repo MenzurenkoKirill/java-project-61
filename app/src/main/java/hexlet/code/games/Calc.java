@@ -3,12 +3,12 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Calc {
-    private final static int border1 = 0;
-    private final static int border2 = 100;
-    private final static int iteration = 3;
-    private final static int inclusive = 1;
-    private final static int borderOperation1 = 1;
-    private final static int borderOperation2 = 3;
+    private static final int MIN_RANGE = 0;
+    private static final int MAX_RANGE = 100;
+    private static final int ITERATION = 3;
+    private static final int INCLUSIVE = 1;
+    private static final int MIN_VALUE_OPERATION = 1;
+    private static final int MAX_VALUE_OPERATION = 3;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
@@ -27,11 +27,11 @@ public class Calc {
         greetings();
         Scanner scannerNumeracy = new Scanner(System.in);
         System.out.println("What is the result of the expression?");
-        for (int i = 1; i <= iteration; i++) {
-            int operand1 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
-            int operand2 = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
-            int operation = (int) (Math.random() * (borderOperation2 - borderOperation1 + inclusive))
-                    + borderOperation1;
+        for (int i = 1; i <= ITERATION; i++) {
+            int operand1 = (int) (Math.random() * (MAX_RANGE - MIN_RANGE + INCLUSIVE)) + MIN_RANGE;
+            int operand2 = (int) (Math.random() * (MAX_RANGE - MIN_RANGE + INCLUSIVE)) + MIN_RANGE;
+            int operation = (int) (Math.random() * (MAX_VALUE_OPERATION - MIN_VALUE_OPERATION + INCLUSIVE))
+                    + MIN_VALUE_OPERATION;
             switch (operation) {
                 case(1):
                     System.out.println("Question: " + operand1 + " + " + operand2);

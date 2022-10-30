@@ -3,10 +3,10 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Prime {
-    private final static int border1 = 2;
-    private final static int border2 = 1000;
-    private final static int iteration = 3;
-    private final static int inclusive = 1;
+    private static final int MIN_RANGE = 2;
+    private static final int MAX_RANGE = 1000;
+    private static final int ITERATION = 3;
+    private static final int INCLUSIVE = 1;
     private static String userName;
     private static void setUserName(String name) {
         userName = name;
@@ -37,8 +37,8 @@ public class Prime {
         greetings();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
-        for (int i = 1; i <= iteration; i++) {
-            int number = (int) (Math.random() * (border2 - border1 + inclusive)) + border1;
+        for (int i = 1; i <= ITERATION; i++) {
+            int number = (int) (Math.random() * (MAX_RANGE - MIN_RANGE + INCLUSIVE)) + MIN_RANGE;
             System.out.println("Question: " + number);
             String answer = scanner.next();
             System.out.println("Your answer: " + answer);
