@@ -7,7 +7,8 @@ import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 import java.util.Scanner;
 
-public class Engine {
+final class Engine {
+    private static final int MAX_VALUE_OPERATION = 3;
     private static final int ITERATION = 3;
     private String userName;
 
@@ -91,7 +92,7 @@ public class Engine {
                         return;
                     }
                     break;
-                case(3):
+                case(MAX_VALUE_OPERATION):
                     System.out.println("Question: " + operand1 + " * " + operand2);
                     String userAnswer3 = scannerNumeracy.next();
                     System.out.println("Your answer: " + userAnswer3);
