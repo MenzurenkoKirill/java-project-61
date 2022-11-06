@@ -3,14 +3,24 @@ package hexlet.code.games;
 import hexlet.code.Game;
 import hexlet.code.Utils;
 
-final public class Progression implements Game {
+public class Progression implements Game {
     private static final int MIN_RANGE = 1;
     private static final int MAX_RANGE = 100;
     private static final int ARRAY_MIN_RANGE = 5;
     private static final int ARRAY_MAX_RANGE = 10;
+
+    /**
+     *
+     * @return - возвращает задание
+     */
     public String getTask() {
         return "What number is missing in the progression?";
     }
+
+    /**
+     *
+     * @return -возвращает вопрос и правильный ответ
+     */
     public String[] getData() {
         String[] dataArray = new String[2];
         int number1 = Utils.getRandom(MIN_RANGE, MAX_RANGE);

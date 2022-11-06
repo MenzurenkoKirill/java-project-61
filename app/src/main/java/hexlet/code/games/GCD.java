@@ -4,7 +4,7 @@ import hexlet.code.Game;
 import hexlet.code.Utils;
 
 
-final public class GCD implements Game {
+public class GCD implements Game {
     private static final int MIN_RANGE = 1;
     private static final int MAX_RANGE = 100;
     private static int findGcd(int n1, int n2) {
@@ -21,9 +21,19 @@ final public class GCD implements Game {
         }
         return n1;
     }
+
+    /**
+     *
+     * @return - возвращает задание
+     */
     public String getTask() {
         return "Find the greatest common divisor of given numbers.";
     }
+
+    /**
+     *
+     * @return - возвращает вопрос и правильный ответ
+     */
     public String[] getData() {
         String[] dataArray = new String[2];
         int number1 = Utils.getRandom(MIN_RANGE, MAX_RANGE);

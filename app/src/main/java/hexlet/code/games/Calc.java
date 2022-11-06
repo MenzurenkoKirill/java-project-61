@@ -4,15 +4,25 @@ import hexlet.code.Game;
 import hexlet.code.Utils;
 
 
-final public class Calc implements Game {
+public class Calc implements Game {
     private static final int MIN_RANGE = 0;
     private static final int MAX_RANGE = 100;
     private static final int MIN_VALUE_OPERATION = 1;
     private static final int MAX_VALUE_OPERATION = 3;
 
+    /**
+     *
+     * @return - возвращает задание
+     */
+
     public String getTask() {
         return "What is the result of the expression?";
     }
+
+    /**
+     *
+     * @return - возвращает вопрос и правильный ответ
+     */
 
     public String[] getData() {
         String[] dataArray = new String[2];

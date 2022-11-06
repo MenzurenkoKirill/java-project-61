@@ -3,12 +3,22 @@ package hexlet.code.games;
 import hexlet.code.Game;
 import hexlet.code.Utils;
 
-final public class Prime implements Game {
+public class Prime implements Game {
     private static final int MIN_RANGE = 2;
     private static final int MAX_RANGE = 1000;
+
+    /**
+     *
+     * @return - возвращает задание
+     */
     public String getTask() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
+
+    /**
+     *
+     * @return - возвращает вопрос и правильный ответ
+     */
     public String[] getData() {
         String[] dataArray = new String[2];
         int number = Utils.getRandom(MIN_RANGE, MAX_RANGE);

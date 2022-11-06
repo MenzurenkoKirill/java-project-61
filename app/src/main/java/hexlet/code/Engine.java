@@ -3,7 +3,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 final class Engine {
-    private static final int MAX_VALUE_OPERATION = 3;
     private static final int ITERATION = 3;
     private String userName;
 
