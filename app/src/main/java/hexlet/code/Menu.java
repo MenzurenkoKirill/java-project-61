@@ -1,14 +1,22 @@
 package hexlet.code;
 
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
+
+
 import java.util.Scanner;
 
 public class Menu {
-    private static final int GAME_GREET = 1;
-    private static final int GAME_NUMBER_GAME = 2;
-    private static final int GAME_NUMERACY = 3;
-    private static final int GAME_GCD = 4;
-    private static final int GAME_ARITHMETIC_PROGRESSION = 5;
-    private static final int GAME_NATURAL_NUMBER = 6;
+    private static final int GREET = 1;
+    private static final int EVEN = 2;
+    private static final int CALC = 3;
+    private static final int GCD = 4;
+    private static final int PROGRESSION = 5;
+    private static final int PRIME = 6;
     public static void startGame() {
         System.out.println("Please enter the game number and press Enter.");
         Scanner mainScanner = new Scanner(System.in);
@@ -22,29 +30,29 @@ public class Menu {
         int userGameChoise = mainScanner.nextInt();
         System.out.println("Your choice: " + userGameChoise);
         switch (userGameChoise) {
-            case (GAME_GREET):
-                Engine user = new Engine();
-                user.greetings();
+            case (GREET):
+                Cli userGreet = new Cli();
+                userGreet.greetings();
                 break;
-            case (GAME_NUMBER_GAME):
-                Engine userGameTwo = new Engine();
-                userGameTwo.gameTwo();
+            case (EVEN):
+                Even userGameTwo = new Even();
+                Engine.startGame(userGameTwo);
                 break;
-            case (GAME_NUMERACY):
-                Engine userGameThree = new Engine();
-                userGameThree.gameThree();
+            case (CALC):
+                Calc userGameThree = new Calc();
+                Engine.startGame(userGameThree);
                 break;
-            case (GAME_GCD):
-                Engine userGameFour = new Engine();
-                userGameFour.gameFour();
+            case (GCD):
+                GCD userGameFour = new GCD();
+                Engine.startGame(userGameFour);
                 break;
-            case (GAME_ARITHMETIC_PROGRESSION):
-                Engine userGameFive = new Engine();
-                userGameFive.gameFive();
+            case (PROGRESSION):
+                Progression userGameFive = new Progression();
+                Engine.startGame(userGameFive);
                 break;
-            case(GAME_NATURAL_NUMBER):
-                Engine userGameSix = new Engine();
-                userGameSix.gameSix();
+            case(PRIME):
+                Prime userGameSix = new Prime();
+                Engine.startGame(userGameSix);
                 break;
             default:
                 System.exit(0);

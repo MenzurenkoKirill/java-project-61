@@ -1,11 +1,25 @@
 package hexlet.code.games;
 
+import hexlet.code.Game;
 import hexlet.code.Utils;
 
-public class Prime {
+public class Prime implements Game {
     private static final int MIN_RANGE = 2;
     private static final int MAX_RANGE = 1000;
-
+    public String getTask() {
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    }
+    public String[] getData() {
+        String[] dataArray = new String[2];
+        int number = Utils.getRandom(MIN_RANGE, MAX_RANGE);
+        dataArray[0] = "Question: " + number;
+        if (isSimple(number)) {
+            dataArray[1] = "yes";
+        } else {
+            dataArray[1] = "no";
+        }
+        return dataArray;
+    }
     public static boolean isSimple(int x) {
         if (x < 2) {
             return false;
@@ -17,11 +31,6 @@ public class Prime {
             }
         }
         return true;
-    }
-    public static boolean naturalNumber() {
-        int number = Utils.getRandom(MIN_RANGE, MAX_RANGE);
-        System.out.println("Question: " + number);
-        return isSimple(number);
     }
 }
 
