@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Game;
 import hexlet.code.Utils;
 
-public class Prime implements Game {
+final public class Prime implements Game {
     private static final int MIN_RANGE = 2;
     private static final int MAX_RANGE = 1000;
     public String getTask() {

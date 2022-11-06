@@ -4,7 +4,7 @@ import hexlet.code.Game;
 import hexlet.code.Utils;
 
 
-public class Calc implements Game {
+final public class Calc implements Game {
     private static final int MIN_RANGE = 0;
     private static final int MAX_RANGE = 100;
     private static final int MIN_VALUE_OPERATION = 1;

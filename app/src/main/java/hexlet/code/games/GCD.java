@@ -4,7 +4,7 @@ import hexlet.code.Game;
 import hexlet.code.Utils;
 
 
-public class GCD implements Game {
+final public class GCD implements Game {
     private static final int MIN_RANGE = 1;
     private static final int MAX_RANGE = 100;
     private static int findGcd(int n1, int n2) {

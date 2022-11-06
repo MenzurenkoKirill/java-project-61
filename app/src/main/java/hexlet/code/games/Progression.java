@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Game;
 import hexlet.code.Utils;
 
-public class Progression implements Game {
+final public class Progression implements Game {
     private static final int MIN_RANGE = 1;
     private static final int MAX_RANGE = 100;
     private static final int ARRAY_MIN_RANGE = 5;

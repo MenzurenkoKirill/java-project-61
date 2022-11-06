@@ -4,7 +4,7 @@ import hexlet.code.Game;
 import hexlet.code.Utils;
 
 
-public class Even implements Game {
+final public class Even implements Game {
     private static final int MIN_RANGE = 0;
     private static final int MAX_RANGE = 100;
     public String getTask() {
