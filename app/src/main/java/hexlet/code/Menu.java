@@ -17,7 +17,7 @@ public class Menu {
     private static final int GCD = 4;
     private static final int PROGRESSION = 5;
     private static final int PRIME = 6;
-    public static void startGame() {
+    public static void startGame() throws Exception {
         System.out.println("Please enter the game number and press Enter.");
         Scanner mainScanner = new Scanner(System.in);
         System.out.println("1 - Greet");
@@ -31,28 +31,22 @@ public class Menu {
         System.out.println("Your choice: " + userGameChoise);
         switch (userGameChoise) {
             case (GREET):
-                Cli userGreet = new Cli();
-                userGreet.greetings();
+                Cli.greetings();
                 break;
             case (EVEN):
-                Even userGameTwo = new Even();
-                Engine.startGame(userGameTwo);
+                Engine.startGame(new Even());
                 break;
             case (CALC):
-                Calc userGameThree = new Calc();
-                Engine.startGame(userGameThree);
+                Engine.startGame(new Calc());
                 break;
             case (GCD):
-                GCD userGameFour = new GCD();
-                Engine.startGame(userGameFour);
+                Engine.startGame(new GCD());
                 break;
             case (PROGRESSION):
-                Progression userGameFive = new Progression();
-                Engine.startGame(userGameFive);
+                Engine.startGame(new Progression());
                 break;
             case(PRIME):
-                Prime userGameSix = new Prime();
-                Engine.startGame(userGameSix);
+                Engine.startGame(new Prime());
                 break;
             default:
                 System.exit(0);

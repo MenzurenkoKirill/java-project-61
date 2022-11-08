@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Game;
 import hexlet.code.Utils;
 
 
@@ -23,12 +22,8 @@ public class Even implements Game {
     public String[] getData() {
         String[] dataArray = new String[2];
         int x = Utils.getRandom(MIN_RANGE, MAX_RANGE);
-        dataArray[0] = "Question: " + x;
-        if (x % 2 == 0) {
-            dataArray[1] = "yes";
-        } else {
-            dataArray[1] = "no";
-        }
+        dataArray[0] = String.valueOf(x);
+        dataArray[1] = x % 2 == 0 ? "yes" : "no";
         return dataArray;
     }
 }

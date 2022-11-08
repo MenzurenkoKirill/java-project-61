@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Game;
 import hexlet.code.Utils;
 
 public class Prime implements Game {
@@ -22,12 +21,8 @@ public class Prime implements Game {
     public String[] getData() {
         String[] dataArray = new String[2];
         int number = Utils.getRandom(MIN_RANGE, MAX_RANGE);
-        dataArray[0] = "Question: " + number;
-        if (isSimple(number)) {
-            dataArray[1] = "yes";
-        } else {
-            dataArray[1] = "no";
-        }
+        dataArray[0] = String.valueOf(number);
+        dataArray[1] = isSimple(number) ? "yes" : "no";
         return dataArray;
     }
     public static boolean isSimple(int x) {
