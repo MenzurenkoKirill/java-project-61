@@ -6,8 +6,10 @@ import java.util.Scanner;
 
 final class Engine {
     private static final int ITERATION = 3;
-    public static void startGame(Game game) throws Exception {
-        System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
+    public static void startGame(Game game) throws RuntimeException {
+        System.out.print("""
+        Welcome to the Brain Games!
+        May I have your name? """);
         Scanner scannerGame = new Scanner(System.in);
         String userName = scannerGame.next();
         System.out.println("Hello, " + userName + "!");
